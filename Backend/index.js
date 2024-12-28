@@ -18,7 +18,7 @@ const dbConfig = {
 };
 
 // GET route: Fetch all companies
-app.get('/companies/search', async (req, res) => {
+app.get('/Companies/search', async (req, res) => {
   const { name } = req.query;
   try {
     const connection = await mysql.createConnection(dbConfig);
@@ -31,7 +31,7 @@ app.get('/companies/search', async (req, res) => {
 });
 
 // POST route: Add a new company
-app.post('/companies', async (req, res) => {
+app.post('/Companies', async (req, res) => {
   const { name, lpa, location } = req.body;
   try {
     const connection = await mysql.createConnection(dbConfig);
